@@ -10,7 +10,7 @@ const server = http.createServer(app); // 3. Creamos el servidor HTTP envolviend
 // 4. Configuración de Socket.io
 const io = new Server(server, {
   cors: {
-    origin: "http://localhost:3000", // Permite la conexión desde tu React
+    origin: ["http://localhost:3000", "http://localhost:5173"], // Permite conexión desde React (3000) y Vite (5173)
     methods: ["GET", "POST"]
   }
 });
